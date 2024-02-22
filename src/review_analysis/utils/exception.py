@@ -1,5 +1,5 @@
 import sys
-from review_analysis import logger
+from src.review_analysis.utils import logger
 
 def error_message_detail(error: str):
     '''

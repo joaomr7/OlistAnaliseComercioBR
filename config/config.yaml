@@ -1,0 +1,6 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  source_dir: datasets
+  dest_dir: artifacts
+  dest_filename: data.csv
