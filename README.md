@@ -1,1 +1,1 @@
-# Análise de reviews do comércio brasileiro - dados da Olist
+# Análise do comércio brasileiro - dados da Olist
