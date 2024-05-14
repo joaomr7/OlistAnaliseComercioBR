@@ -2,5 +2,29 @@ artifacts_root: artifacts
 
 data_ingestion:
   source_dir: datasets
-  dest_dir: artifacts
+  dest_dir: artifacts/data_ingestion
   dest_filename: data.csv
+
+lda:
+  root_dir: artifacts/lda
+
+  data_ingestion:
+    dest_dir: artifacts/lda/data_ingestion
+    dest_filename: reviews.csv
+    dest_train_filename: reviews_train.csv
+    dest_test_filename: reviews_test.csv
+    source_data_path: artifacts/data_ingestion/data.csv
+
+  data_transformation:
+    dest_dir: artifacts/lda/data_tranformation
+    transformer_obj_filename: lda_tranformer.pkl
+    dest_train_filename: reviews_train.csv
+    dest_test_filename: reviews_test.csv
+    train_data_path: artifacts/lda/data_ingestion/reviews_train.csv
+    test_data_path: artifacts/lda/data_ingestion/reviews_test.csv
+
+  model_trainer:
+    dest_dir: artifacts/lda/
+    model_filename: lda_model.pkl
+    train_data_path: artifacts/lda/data_tranformation/reviews_train.csv
+    test_data_path: artifacts/lda/data_tranformation/reviews_test.csv

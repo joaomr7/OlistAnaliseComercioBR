@@ -1,0 +1,53 @@
+lda_model_params:
+  n_components: 2
+  doc_prior: 1.0
+  word_prior: 0.15
+  max_iter: 100
+
+lda_data_tranformation_params:
+  max_ngram: 2
+  max_df: 1.0
+  min_df: 0.009
+  max_features: 142
+
+  custom_stop_words: [
+    'não', 'nao', 'otimo', 'ótimo', 'fiscal', 'lannister', 'targaryen', 'stark', 'comprei', 'comprar', 'nota',
+    'capa', 'cadeira', 'preto', 'cartucho', 'casa', 'jogo', 'tecido',
+    'relogio', 'relógio', 'site', 'anuncio', 'anunciar', 'caixa', 'cor',
+    'pro', 'pra', 'dar', 'ir', 'ok', 'com', 'hoje', 'ser', 'si',
+    'velho', 'usb', 'xper', 'queen', 'king', 'ha', 'eu', 'etc', 'eh', 'nf',
+    'ne', 'naar', 'ai', 'gostar', 'ola', 'olá', 'ate', 'tb', 'td', 'to', 'ta', 'so',
+    'dia', 'noite', 'tarde', 'item', 'ja', 'já', 'kit', 'loja'
+  ]
+
+  typos_correction: {
+    ñ: 'não',
+    kd: 'cadê',
+    vc: 'você',
+    vcs: 'vocês',
+    vei: 'veio',
+    demor: 'demora',
+    hj: 'hoje',
+    aind: 'ainda',
+    pq: 'porquê',
+    insacisfeito: 'insatisfeito',
+    lamenetável: 'lamentável',
+    retor: 'retorno'
+  }
+  
+  words_substitution: {
+    receber: ['entregar', 'entrega', 'recebi', 'chegar', 'chegou', 'receber'],
+    pagar: ['pagamento', 'pagar', 'paguar', 'paguei'],
+    recomendar: ['recomendado', 'recomendar', 'recomendaria', 'recomendavel', 'recomendo', 'recomento'],
+    falta: ['falta', 'faltar'],
+    demora: ['demora', 'demorar', 'demorou', 'demorado'],
+    devolver: ['devolver', 'devolução', 'devolucao'],
+    atraso: ['atraso', 'atrasado'],
+    vir: ['veio', 'vir'],
+    erro: ['erro', 'errar'],
+    ruim: ['ruim', 'horrível', 'lamentável'],
+    produto: ['produto', 'produtos', 'aperelho'],
+    retorno: ['retorno', 'retornar'],
+    defeito: ['defeito', 'quebrado', 'quebrada', 'amassar', 'amassado', 'amassada', 'defeituoso', 'defeituosa', 'estragar', 'estragado', 'estragada'],
+    falso: ['falso', 'falsificar']
+  }

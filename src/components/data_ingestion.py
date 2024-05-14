@@ -2,10 +2,10 @@ import os
 from pathlib import Path
 import pandas as pd
 
-from src.review_analysis.utils.exception import CustomException
-from src.review_analysis.entity.config_entity import DataIngestionConfig
-from src.review_analysis.utils.common import create_directories
-from src.review_analysis.utils import logger
+from src.utils.exception import CustomException
+from src.entity.config_entity import DataIngestionConfig
+from src.utils.common import create_directories
+from src.utils import logger
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
