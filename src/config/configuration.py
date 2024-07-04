@@ -2,6 +2,7 @@ from src.constants import *
 from src.utils.common import read_yaml, create_directories
 
 from src.entity.config_entity import DataIngestionConfig
+from src.entity.config_entity import DataPreprocessingConfig
 from src.entity.config_entity import LDADataIngestionConfig
 from src.entity.config_entity import LDADataTransformationConfig
 from src.entity.config_entity import LDAModelTrainerConfig
@@ -24,6 +25,17 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+    
+    def get_data_preprocessing_config(self) -> DataPreprocessingConfig:
+        config = self.config.data_preprocessing
+
+        data_preprocessing_config = DataPreprocessingConfig(
+            dest_dir=config.dest_dir,
+            dest_filename=config.dest_filename,
+            source_data_path=config.source_data_path
+        )
+
+        return data_preprocessing_config
     
     def get_lda_data_ingestion_config(self) -> LDADataIngestionConfig:
         config = self.config.lda.data_ingestion

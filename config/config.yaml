@@ -5,6 +5,11 @@ data_ingestion:
   dest_dir: artifacts/data_ingestion
   dest_filename: data.csv
 
+data_preprocessing:
+  dest_dir: artifacts/data_preprocessing
+  dest_filename: data.csv
+  source_data_path: artifacts/data_ingestion/data.csv
+
 lda:
   root_dir: artifacts/lda
 

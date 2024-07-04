@@ -10,6 +10,12 @@ class DataIngestionConfig:
     dest_filename: str
 
 @dataclass(frozen=True)
+class DataPreprocessingConfig:
+    dest_dir: Path
+    dest_filename: str
+    source_data_path: Path
+
+@dataclass(frozen=True)
 class LDADataIngestionConfig:
     dest_dir: Path
     dest_filename: str

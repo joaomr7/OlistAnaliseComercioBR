@@ -1,6 +1,6 @@
 import setuptools
 
-PROJECT_NAME = 'Analise comercio Olist'
+PROJECT_NAME = 'Analise E-Commerce Brasileiro'
 PROJECT_VERSION = '0.0.1'
 PROJECT_AUTHOR = 'João Marcos'
 
